@@ -3,6 +3,7 @@ package suite.features;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import suite.BaseTest;
 import suite.categories.Smoke;
 
 
@@ -13,11 +14,7 @@ import static suite.pages.ToDoMvcTest.*;
 /**
  * Created by barocko on 8/14/2016.
  */
-public class ToDoMvcLifeCycleTest {
-    @BeforeClass
-    public static void setup() {
-        com.codeborne.selenide.Configuration.browser = "chrome";
-    }
+public class ToDoMvcLifeCycleTest extends BaseTest {
 
     @Test
     @Category(Smoke.class)

@@ -45,7 +45,6 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
-    @Category(Smoke.class)
     public void testClearCompleted() {
         given(aTask(TaskType.COMPLETED, "1"), aTask(TaskType.ACTIVE, "2"));
 
@@ -56,7 +55,6 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
-    @Category(Smoke.class)
     public void testSwitchFilterToCompleted() {
         given(aTask(TaskType.COMPLETED, "1"), aTask(TaskType.ACTIVE, "2"));
 
@@ -67,7 +65,6 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
-    @Category(Smoke.class)
     public void testCancelEdit() {
         givenAtAll(TaskType.ACTIVE, "1");
 
@@ -78,7 +75,6 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
-    @Category(Smoke.class)
     public void testReopen() {
         givenAtAll(TaskType.COMPLETED, "1");
 
