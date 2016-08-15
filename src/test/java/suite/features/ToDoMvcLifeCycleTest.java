@@ -1,13 +1,9 @@
 package suite.features;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import suite.BaseTest;
 import suite.categories.Smoke;
 
-
-import javax.security.auth.login.Configuration;
 
 import static suite.pages.ToDoMvcTest.*;
 
@@ -19,7 +15,9 @@ public class ToDoMvcLifeCycleTest extends BaseTest {
     @Test
     @Category(Smoke.class)
     public void testTaskLifeCycle() {
+        System.out.println(System.getProperty("driver.browser"));
         given();
+
 
         add("1");
         toggle("1");

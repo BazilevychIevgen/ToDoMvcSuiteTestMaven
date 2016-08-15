@@ -53,7 +53,7 @@
                     <test>suite.${suite}</test>
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>C:\Users\barocko\Desktop\Study\chromedriver\chromedriver.exe</webdriver.chrome.driver>
-                        <driver.browser>$(driver.browser)</driver.browser>
+                        <driver.browser>${driver.browser}</driver.browser>
                     </systemPropertyVariables>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"

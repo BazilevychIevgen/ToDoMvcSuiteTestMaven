@@ -14,5 +14,4 @@ import suite.features.ToDoMvcLifeCycleTest;
 @Suite.SuiteClasses(ToDoMvcLifeCycleTest.class)
 @Categories.IncludeCategory(Smoke.class)
 public class SmokeSuiteTest {
-
 }

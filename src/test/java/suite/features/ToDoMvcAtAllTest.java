@@ -10,7 +10,7 @@ import static suite.pages.ToDoMvcTest.*;
 /**
  * Created by barocko on 8/14/2016.
  */
-public class ToDoMvcAtAllTest {
+public class ToDoMvcAtAllTest extends BaseTest {
 
     @Test
     @Category(Smoke.class)
