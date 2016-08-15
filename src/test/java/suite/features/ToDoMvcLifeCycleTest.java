@@ -15,7 +15,7 @@ public class ToDoMvcLifeCycleTest extends BaseTest {
     @Test
     @Category(Smoke.class)
     public void testTaskLifeCycle() {
-        System.out.println(System.getProperty("driver.browser"));
+
         given();
 
 

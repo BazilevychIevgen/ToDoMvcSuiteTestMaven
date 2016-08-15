@@ -10,5 +10,6 @@ public class BaseTest {
 
     static{
         Configuration.browser = System.getProperty("driver.browser");
+        System.out.println(System.getProperty("driver.browser"));
     }
 }
