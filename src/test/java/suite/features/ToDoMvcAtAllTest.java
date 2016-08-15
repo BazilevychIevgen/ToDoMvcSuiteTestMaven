@@ -5,7 +5,7 @@ import org.junit.experimental.categories.Category;
 import suite.categories.Buggy;
 import suite.categories.Smoke;
 
-import static suite.pages.ToDoMvcTest.*;
+import static suite.pages.ToDoMvcPage.*;
 
 /**
  * Created by barocko on 8/14/2016.

@@ -19,7 +19,7 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 /**
  * Created by barocko on 8/14/2016.
  */
-public class ToDoMvcTest {
+public class ToDoMvcPage {
     private static ElementsCollection tasks = $$("#todo-list li");
 
     private static SelenideElement newTodo = $("#new-todo");
