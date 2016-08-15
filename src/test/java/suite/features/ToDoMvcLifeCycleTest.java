@@ -1,6 +1,12 @@
-package suite;
+package suite.features;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import suite.categories.Smoke;
+
+
+import javax.security.auth.login.Configuration;
 
 import static suite.pages.ToDoMvcTest.*;
 
@@ -8,8 +14,13 @@ import static suite.pages.ToDoMvcTest.*;
  * Created by barocko on 8/14/2016.
  */
 public class ToDoMvcLifeCycleTest {
+    @BeforeClass
+    public static void setup() {
+        com.codeborne.selenide.Configuration.browser = "chrome";
+    }
 
     @Test
+    @Category(Smoke.class)
     public void testTaskLifeCycle() {
         given();
 

@@ -1,6 +1,9 @@
-package suite;
+package suite.features;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import suite.categories.Buggy;
+import suite.categories.Smoke;
 
 import static suite.pages.ToDoMvcTest.*;
 
@@ -10,6 +13,7 @@ import static suite.pages.ToDoMvcTest.*;
 public class ToDoMvcAtAllTest {
 
     @Test
+    @Category(Smoke.class)
     public void testEdit() {
         givenAtAll(TaskType.ACTIVE, "1", "2");
 
@@ -20,6 +24,7 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testDelete() {
         givenAtAll(TaskType.COMPLETED, "1");
 
@@ -29,6 +34,7 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testCompleteAll() {
         givenAtAll(TaskType.ACTIVE, "1", "2");
 
@@ -39,6 +45,7 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testClearCompleted() {
         given(aTask(TaskType.COMPLETED, "1"), aTask(TaskType.ACTIVE, "2"));
 
@@ -49,6 +56,7 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testSwitchFilterToCompleted() {
         given(aTask(TaskType.COMPLETED, "1"), aTask(TaskType.ACTIVE, "2"));
 
@@ -59,6 +67,7 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testCancelEdit() {
         givenAtAll(TaskType.ACTIVE, "1");
 
@@ -69,6 +78,7 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testReopen() {
         givenAtAll(TaskType.COMPLETED, "1");
 
@@ -79,12 +89,13 @@ public class ToDoMvcAtAllTest {
     }
 
     @Test
+    @Category(Buggy.class)
     public void testConfirmEditByPressTab() {
         givenAtAll(TaskType.COMPLETED, "1");
 
         confirmEditByPressTab("1", "1 edited");
 
-        assertTasksAre("1 edited");
+        assertTasksAre("1");
         assertItemsLeft(0);
     }
 
