@@ -15,6 +15,8 @@
         <aspectj.version>1.8.5</aspectj.version>
          <suite>*Test</suite>
         <driver.browser>firefox</driver.browser>
+        <test.includeCategories></test.includeCategories>
+        <test.excludeCategories></test.excludeCategories>
     </properties>
 
     <dependencies>
@@ -55,6 +57,8 @@
                         <webdriver.chrome.driver>D:\chromedriver\chromedriver.exe</webdriver.chrome.driver>
                         <driver.browser>${driver.browser}</driver.browser>
                     </systemPropertyVariables>
+                    <groups>${test.includeCategories}</groups>
+                    <excludedGroups>${test.excludeCategories}</excludedGroups>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
@@ -87,5 +91,31 @@
         </plugins>
     </reporting>
 
-
+    <profiles>
+        <profile>
+            <id>smoke</id>
+            <properties>
+                <test.includeCategories>suite.categories.Smoke</test.includeCategories>
+                <test.excludeCategories>suite.categories.Buggy</test.excludeCategories>
+            </properties>
+        </profile>
+        <profile>
+            <id>acceptance</id>
+            <properties>
+                <test.includeCategories></test.includeCategories>
+                <test.excludeCategories>suite.categories.Buggy</test.excludeCategories>
+            </properties>
+        </profile>
+        <profile>
+            <id>all</id>
+            <properties>
+            </properties>
+        </profile>
+        <profile>
+            <id>buggy</id>
+            <properties>
+                <test.includeCategories>suite.categories.Buggy</test.includeCategories>
+            </properties>
+        </profile>
+    </profiles>
 </project>
