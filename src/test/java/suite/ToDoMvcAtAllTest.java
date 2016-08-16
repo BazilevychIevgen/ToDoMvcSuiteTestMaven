@@ -1,4 +1,4 @@
-package suite.features;
+package suite;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;

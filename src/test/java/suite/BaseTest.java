@@ -1,7 +1,6 @@
-package suite.features;
+package suite;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.BeforeClass;
 
 /**
  * Created by barocko on 8/15/2016.
